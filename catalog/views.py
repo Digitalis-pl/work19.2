@@ -12,8 +12,8 @@ def contacts(request):
         data['phone'] = request.POST.get('phone')
         data['message'] = request.POST.get('message')
         print(f'{data}')
-    with open('../user_data.json', 'w', encoding="utf-8") as file:
-        json.dump(data, file)
+        with open('user_data.json', 'w', encoding="utf-8") as file:
+            json.dump(data, file)
     return render(request, 'main/contacts.html')
 
 
